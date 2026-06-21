@@ -33,10 +33,11 @@ export async function GET(request) {
       return Response.redirect(new URL("/?instagram_oauth=token_error", url.origin));
     }
 
+    const secure = url.protocol === "https:" ? "; Secure" : "";
     const response = Response.redirect(new URL("/?instagram_oauth=connected", url.origin));
     response.headers.append(
       "Set-Cookie",
-      `mc_instagram_token=${encodeURIComponent(tokenData.access_token)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=2592000`
+      `mc_instagram_token=${encodeURIComponent(tokenData.access_token)}; Path=/; HttpOnly${secure}; SameSite=Lax; Max-Age=2592000`
     );
     return response;
   } catch {

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MedCreator Pro | Plataforma de posicionamento digital para médicos</title>
-  <meta name="description" content="O MedCreator Pro ajuda médicos a criarem conteúdo estratégico, fortalecerem autoridade e construírem uma presença digital mais profissional." />
-  <meta property="og:title" content="MedCreator Pro | Plataforma de posicionamento digital para médicos" />
-  <meta property="og:description" content="Conteúdo estratégico, Instagram Pro, biblioteca secreta e calendário editorial para médicos crescerem no digital com autoridade." />
+  <title>MedCreator Pro | Plataforma de conteúdo e autoridade digital para médicos</title>
+  <meta name="description" content="Crie roteiros, stories, calendário editorial e analise seu Instagram com uma plataforma feita para médicos que desejam crescer com estratégia, ética e autoridade." />
+  <meta property="og:title" content="MedCreator Pro | Plataforma de conteúdo e autoridade digital para médicos" />
+  <meta property="og:description" content="Crie roteiros, stories, calendário editorial e analise seu Instagram com estratégia, ética e autoridade." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="brand/medcreatorpro-logo-horizontal-dark.svg" />
   <meta name="theme-color" content="#003B8E" />
@@ -3698,6 +3698,113 @@
         max-width: 100% !important;
       }
     }
+  
+
+    /* Strategic landing refresh - MedCreator Pro */
+    .brand-wordmark-mark svg { width: 28px; height: 28px; display: block; filter: drop-shadow(0 10px 18px rgba(30,155,255,.26)); }
+    .authority-hero { align-items: center; }
+    .hero-safety {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      max-width: 680px !important;
+      margin-top: 14px !important;
+      color: rgba(231,255,250,.72) !important;
+      font-size: .88rem !important;
+      line-height: 1.5 !important;
+    }
+    .hero-safety i { color: #2dd4bf; flex: 0 0 auto; }
+    .pain-section, .demo-section, .instagram-premium {
+      background:
+        radial-gradient(circle at 12% 0%, rgba(30,155,255,.14), transparent 35%),
+        linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+    }
+    .pain-grid, .pillar-grid, .demo-grid, .trust-grid, .mini-metrics {
+      display: grid;
+      gap: 14px;
+    }
+    .pain-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 22px; }
+    .pillar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .demo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 22px; }
+    .pain-grid article, .pillar-grid article, .demo-grid article, .trust-grid article {
+      position: relative;
+      overflow: hidden;
+      min-height: 132px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.045));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 18px 44px rgba(0,0,0,.16);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .pain-grid article:hover, .pillar-grid article:hover, .demo-grid article:hover, .trust-grid article:hover, .product-grid article:hover, .plan-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(30,155,255,.34);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 26px 70px rgba(0,31,84,.22);
+    }
+    .pain-grid i, .pillar-grid i, .demo-grid i, .trust-grid i { color: #1e9bff; }
+    .pain-grid strong, .pillar-grid strong, .demo-grid strong, .trust-grid strong {
+      display: block;
+      margin-top: 12px;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: -.035em;
+    }
+    .pain-grid span, .demo-grid span, .trust-grid span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(231,255,250,.66);
+      font-size: .82rem;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+    .specialty-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    .specialty-cloud b, .mini-metrics b {
+      padding: 9px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-size: .74rem;
+      font-weight: 900;
+    }
+    .mini-metrics {
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 18px;
+    }
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .before-after-grid article {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.075);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    }
+    .before-after-grid strong { display: block; color: #fff; font-size: 1.08rem; margin-bottom: 12px; }
+    .before-after-grid ul { display: grid; gap: 8px; margin: 0; padding-left: 18px; color: rgba(231,255,250,.72); font-weight: 750; line-height: 1.45; }
+    .public-footer a { color: rgba(235,248,255,.78) !important; }
+    .public-footer a:hover { color: #fff !important; }
+    @media (max-width: 1120px) {
+      .pain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .pain-grid, .pillar-grid, .demo-grid, .before-after-grid, .mini-metrics { grid-template-columns: 1fr; }
+      .hero-safety { align-items: flex-start; }
+      .doctor-access-fixed { bottom: 16px; right: 16px; left: 16px; justify-content: center; }
+      .public-main { padding-bottom: 108px; }
+    }
+
   </style>
 </head>
 <body>
@@ -3707,14 +3814,21 @@
     <header class="public-nav">
       <div class="brand public-brand" style="padding:0;border:0;">
         <a class="brand-wordmark" href="#loginScreen" aria-label="MedCreator Pro">
-          <span class="brand-wordmark-mark">M</span>
+          <span class="brand-wordmark-mark"><svg viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+              <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#mcpMarkGradientInline)"></rect>
+              <path d="M27 66V30L48 57L69 30V66" fill="none" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M27 30H36L48 47L60 30H69" fill="none" stroke="#DFF3FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".78"></path>
+              <circle cx="72" cy="24" r="5" fill="#DFF3FF"></circle>
+              <circle cx="24" cy="72" r="4" fill="#DFF3FF" opacity=".88"></circle>
+              <defs><linearGradient id="mcpMarkGradientInline" x1="14" y1="10" x2="84" y2="88" gradientUnits="userSpaceOnUse"><stop stop-color="#1E9BFF"></stop><stop offset=".55" stop-color="#0066E6"></stop><stop offset="1" stop-color="#001F54"></stop></linearGradient></defs>
+            </svg></span>
           <span class="brand-wordmark-name">MedCreator <b>PRO</b></span>
           <span class="brand-wordmark-sub">Central inteligente para médicos criadores</span>
         </a>
       </div>
       <nav class="public-links" aria-label="Seções da página">
+        <a href="#dor-public">Dor</a>
         <a href="#solucao-public">Solução</a>
-        <a href="#como-funciona-public">Como funciona</a>
         <a href="#instagram-pro-public">Instagram Pro</a>
         <a href="#planos-public">Planos</a>
         <a href="#area-medico">Área do médico</a>
@@ -3723,27 +3837,28 @@
     <a class="doctor-access-fixed" href="#area-medico" aria-label="Acessar Área do Médico"><i data-lucide="lock-keyhole"></i><span>Área do Médico</span></a>
 
     <main class="public-main">
-      <section class="public-hero">
+      <section class="public-hero authority-hero">
         <div class="public-copy">
-          <div class="login-kicker"><span></span> IA, Instagram e conteúdo médico de alta performance</div>
-          <h2>Seu conhecimento médico merece virar autoridade, não ansiedade.</h2>
-          <p>O MedCreator Pro ajuda médicos que travam no digital por falta de tempo, medo do CRM e dúvida sobre o que postar. A plataforma transforma sua especialidade em roteiros, stories, calendário, análise de Instagram e conteúdos éticos que geram conexão, desejo e agendamentos.</p>
+          <div class="login-kicker"><span></span> Autoridade médica, IA e Instagram Pro</div>
+          <h2>Seu Instagram não precisa parecer de influenciador. Precisa parecer de um médico que sabe se posicionar.</h2>
+          <p>O MedCreator Pro transforma sua especialidade em roteiros, stories, calendário, análise de Instagram e comunicação ética para atrair pacientes com mais autoridade, clareza e previsibilidade.</p>
           <div class="public-actions">
-            <a class="btn btn-primary" href="#planos-public"><i data-lucide="credit-card"></i>Ver planos</a>
-            <a class="btn btn-muted" href="#area-medico"><i data-lucide="lock-keyhole"></i>Já tenho acesso</a>
+            <a class="btn btn-primary" href="#planos-public"><i data-lucide="arrow-right"></i>Começar agora</a>
+            <a class="btn btn-muted" href="#como-funciona-public"><i data-lucide="workflow"></i>Ver como funciona</a>
           </div>
+          <p class="hero-safety"><i data-lucide="shield-check"></i>Conteúdo estruturado com atenção às normas de publicidade médica, CRM/RQE e comunicação responsável.</p>
           <div class="login-proof">
             <div><strong>+3.000</strong><span>roteiros, ganchos, CTAs e prompts por especialidade</span></div>
             <div><strong>55 áreas</strong><span>conteúdo direcionado para a prática médica real</span></div>
             <div><strong>Instagram Pro</strong><span>API oficial, Insights reais, prints e plano de evolução</span></div>
           </div>
         </div>
-        <div class="public-product" aria-label="Resumo visual da plataforma">
-          <div class="product-top"><span></span><span></span><span></span><strong>Med Creator PRO</strong></div>
+        <div class="public-product" aria-label="Mockup premium da plataforma">
+          <div class="product-top"><span></span><span></span><span></span><strong>MedCreator Pro</strong></div>
           <div class="hero-intelligence-card">
             <div class="hero-intelligence-caption">
-              <strong>Central inteligente de produção médica</strong>
-              <span>IA, Instagram Pro, biblioteca secreta e calendário conectados para criar com método.</span>
+              <strong>Central inteligente de autoridade médica</strong>
+              <span>IA, Instagram Pro, biblioteca secreta, calendário editorial e checklist ético conectados para criar com método.</span>
             </div>
             <div class="ai-orbit">IA</div>
             <div class="signal-bars" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -3757,117 +3872,121 @@
         </div>
       </section>
 
-      <section class="public-strip">
-        <article><i data-lucide="shield-check"></i><strong>Ética e CRM</strong><span>Conteúdo com alertas para evitar promessas, exposição indevida e comunicação arriscada.</span></article>
-        <article><i data-lucide="target"></i><strong>Performance</strong><span>Formatos pensados para alcance, retenção, conexão e venda de consulta, procedimento ou serviço.</span></article>
-        <article><i data-lucide="brain-circuit"></i><strong>Tom de voz</strong><span>A plataforma aprende sua especialidade, posicionamento e estilo para entregar conteúdos menos genéricos.</span></article>
+      <section class="public-section pain-section" id="dor-public">
+        <div class="section-title public-title">
+          <div><span class="public-eyebrow">A trava do médico no digital</span><h3>O problema não é falta de conhecimento. É falta de posicionamento.</h3><p>Você estudou anos, atende pacientes, domina sua especialidade, mas na hora de transformar isso em presença digital trava. Não sabe o que postar, tem medo de errar nas normas, perde tempo criando legenda e acaba deixando o Instagram nas mãos do improviso.</p></div>
+        </div>
+        <div class="pain-grid">
+          <article><i data-lucide="brain"></i><strong>Você sabe medicina</strong><span>Mas não sabe transformar isso em conteúdo claro, estratégico e constante.</span></article>
+          <article><i data-lucide="shield-alert"></i><strong>Receio de parecer apelativo</strong><span>O medo de infringir normas trava ideias boas antes mesmo de publicar.</span></article>
+          <article><i data-lucide="shuffle"></i><strong>Posta sem linha editorial</strong><span>Sem método, fica difícil saber o que repetir, pausar ou aprofundar.</span></article>
+          <article><i data-lucide="user-search"></i><strong>Perfil sem clareza</strong><span>O paciente não entende rapidamente por que deveria escolher você.</span></article>
+          <article><i data-lucide="clock"></i><strong>Falta de consistência</strong><span>Oportunidades se perdem porque a produção depende de tempo livre.</span></article>
+        </div>
       </section>
 
       <section class="public-section public-split" id="solucao-public">
         <div>
           <span class="public-eyebrow">O que é o MedCreator Pro</span>
-          <h3>Uma solução digital para médicos que querem presença, autoridade e direção no digital.</h3>
-          <p>O MedCreator Pro foi criado para médicos que querem construir autoridade, melhorar sua presença digital, criar conteúdo estratégico e se posicionar com mais profissionalismo no mercado sem depender de improviso.</p>
+          <h3>A central de autoridade médica para transformar conhecimento em conteúdo, posicionamento e agenda.</h3>
+          <p>O MedCreator Pro reúne inteligência artificial, roteiros por especialidade, biblioteca de ideias, calendário editorial, análise de Instagram e alertas de comunicação médica para ajudar médicos a construírem uma presença digital mais clara, estratégica e profissional.</p>
           <div class="public-actions">
-            <a class="btn btn-primary" href="#planos-public"><i data-lucide="arrow-right"></i>Quero acessar o MedCreator Pro</a>
-            <a class="btn btn-muted" href="#como-funciona-public"><i data-lucide="workflow"></i>Ver como funciona</a>
+            <a class="btn btn-primary" href="#planos-public"><i data-lucide="arrow-right"></i>Quero acessar</a>
+            <a class="btn btn-muted" href="#demo-public"><i data-lucide="monitor-play"></i>Ver a plataforma</a>
           </div>
         </div>
-        <div class="public-feature-card">
-          <strong>O problema que a plataforma resolve</strong>
-          <span>Muitos médicos sabem que precisam aparecer, mas não sabem o que postar, como manter consistência, como vender com ética ou como transformar conhecimento em autoridade digital.</span>
-          <ul class="public-checks compact-list">
-            <li><i data-lucide="x"></i>Conteúdo improvisado e sem linha editorial.</li>
-            <li><i data-lucide="x"></i>Perfil com baixa clareza de posicionamento.</li>
-            <li><i data-lucide="x"></i>Dificuldade em criar stories, reels e CTAs.</li>
-          </ul>
+        <div class="pillar-grid">
+          <article><i data-lucide="wand-sparkles"></i><strong>Criador IA para médicos</strong></article>
+          <article><i data-lucide="library-big"></i><strong>Biblioteca por especialidade</strong></article>
+          <article><i data-lucide="calendar-days"></i><strong>Calendário editorial</strong></article>
+          <article><i data-lucide="instagram"></i><strong>Instagram Pro</strong></article>
+          <article><i data-lucide="shield-check"></i><strong>Checklist ético</strong></article>
+          <article><i data-lucide="target"></i><strong>Planejamento estratégico</strong></article>
         </div>
       </section>
 
-      <section class="public-section" id="entregas-public">
+      <section class="public-section demo-section" id="demo-public">
         <div class="section-title public-title">
-          <div><span class="public-eyebrow">O que a plataforma entrega</span><h3>Ferramentas práticas para transformar conteúdo médico em autoridade.</h3><p>Uma experiência organizada para médicos que querem clareza, método e execução com aparência profissional.</p></div>
+          <div><span class="public-eyebrow">Produto robusto</span><h3>Uma plataforma visualmente organizada para criar, analisar e planejar.</h3><p>As principais telas foram pensadas para reduzir dúvida, acelerar execução e dar ao médico uma visão prática do que fazer na semana.</p></div>
         </div>
-        <div class="feature-grid">
-          <article><i data-lucide="radar"></i><strong>Diagnóstico de posicionamento</strong><span>Leitura estratégica do perfil, comunicação, bio, conteúdos e oportunidades de melhoria.</span></article>
-          <article><i data-lucide="instagram"></i><strong>Instagram Pro com dados reais</strong><span>Conexão oficial via Meta, importação de Insights, leitura de posts, diagnóstico por print e plano editorial.</span></article>
-          <article><i data-lucide="list-tree"></i><strong>Linha editorial</strong><span>Organização de temas por especialidade, objetivo e formato de conteúdo.</span></article>
-          <article><i data-lucide="video"></i><strong>Ideias para Reels e Stories</strong><span>Roteiros, cenas, ganchos visuais, bastidores seguros e CTAs éticos.</span></article>
-          <article><i data-lucide="copy"></i><strong>Direcionamento de copy</strong><span>Textos, legendas, prompts e chamadas para ação com linguagem médica profissional.</span></article>
-          <article><i data-lucide="calendar-days"></i><strong>Calendário de conteúdo</strong><span>Planejamento editorial com status, horário, anexos, lembretes e exportação.</span></article>
-        </div>
-      </section>
-
-      <section class="public-section" id="funcionalidades-public">
-        <div class="section-title public-title">
-          <div><span class="public-eyebrow">Funcionalidades</span><h3>Tudo organizado para o médico não perder tempo.</h3><p>Painel simples, materiais práticos, biblioteca de ideias, orientações de posicionamento e uma experiência pensada para computador e celular.</p></div>
-        </div>
-        <div class="feature-grid compact">
-          <article><i data-lucide="layout-dashboard"></i><strong>Painel intuitivo</strong><span>Visão clara do que criar, acompanhar e priorizar.</span></article>
-          <article><i data-lucide="library-big"></i><strong>Acesso aos conteúdos</strong><span>Biblioteca de alta performance por especialidade.</span></article>
-          <article><i data-lucide="milestone"></i><strong>Etapas organizadas</strong><span>Diagnóstico, direção, execução, autoridade e crescimento.</span></article>
-          <article><i data-lucide="book-open-check"></i><strong>Materiais práticos</strong><span>Roteiros, prompts, temas, CTAs e formatos aplicáveis.</span></article>
-          <article><i data-lucide="trending-up"></i><strong>Área de evolução</strong><span>Direcionamento para melhorar presença e comunicação.</span></article>
-          <article><i data-lucide="smartphone"></i><strong>Acesso responsivo</strong><span>Interface limpa para usar no computador ou celular.</span></article>
+        <div class="demo-grid">
+          <article><i data-lucide="layout-dashboard"></i><strong>Dashboard principal</strong><span>Prioridades da semana, radar médico e atalhos de produção.</span></article>
+          <article><i data-lucide="sparkles"></i><strong>Criador de roteiros IA</strong><span>Seu roteiro pronto em poucos minutos.</span></article>
+          <article><i data-lucide="library"></i><strong>Biblioteca de ideias</strong><span>Seu conteúdo alinhado à sua especialidade.</span></article>
+          <article><i data-lucide="calendar-check"></i><strong>Calendário editorial</strong><span>Seu calendário semanal organizado.</span></article>
+          <article><i data-lucide="instagram"></i><strong>Instagram Pro</strong><span>Seu Instagram analisado com clareza.</span></article>
+          <article><i data-lucide="badge-check"></i><strong>Checklist ético</strong><span>Cuidados de comunicação antes de publicar.</span></article>
         </div>
       </section>
 
       <section class="public-section journey-section" id="como-funciona-public">
         <div class="section-title public-title">
-          <div><span class="public-eyebrow">Jornada do médico</span><h3>Um método para sair do improviso e construir autoridade.</h3></div>
+          <div><span class="public-eyebrow">Como funciona</span><h3>Da dúvida ao conteúdo pronto em poucos minutos.</h3><p>Você não precisa começar do zero. A plataforma organiza ideias, transforma temas médicos em conteúdos estratégicos e ajuda você a manter uma presença digital profissional sem depender de improviso.</p></div>
         </div>
         <div class="journey-grid">
-          <article><b>1</b><strong>Diagnóstico</strong><span>O médico entende onde está errando no posicionamento e na comunicação.</span></article>
-          <article><b>2</b><strong>Direção estratégica</strong><span>A plataforma mostra caminhos de conteúdo, linha editorial e autoridade.</span></article>
-          <article><b>3</b><strong>Execução</strong><span>O médico passa a produzir com mais clareza, consistência e profissionalismo.</span></article>
-          <article><b>4</b><strong>Autoridade</strong><span>O perfil deixa de parecer genérico e passa a transmitir mais valor.</span></article>
-          <article><b>5</b><strong>Crescimento</strong><span>A presença digital se torna mais estratégica, confiável e profissional.</span></article>
+          <article><b>1</b><strong>Escolha sua especialidade</strong><span>A base de conteúdo muda conforme a área médica selecionada.</span></article>
+          <article><b>2</b><strong>Gere roteiros, posts e stories</strong><span>A IA entrega gancho, cena, fala, CTA e orientação de gravação.</span></article>
+          <article><b>3</b><strong>Organize o calendário</strong><span>Planeje dia, horário, formato, status e anexos.</span></article>
+          <article><b>4</b><strong>Analise o Instagram</strong><span>Use API, prints ou dados importados para receber um diagnóstico.</span></article>
+          <article><b>5</b><strong>Publique com mais segurança</strong><span>Mantenha clareza, consistência e comunicação responsável.</span></article>
+        </div>
+      </section>
+
+      <section class="public-section public-split instagram-premium" id="instagram-pro-public">
+        <div>
+          <span class="public-eyebrow">Funcionalidade exclusiva</span>
+          <h3>O recurso que separa opinião de estratégia: Instagram Pro.</h3>
+          <p>Pare de postar no escuro. O Instagram Pro analisa dados, prints, bio, capas, CTAs e formatos para mostrar o que deve continuar, o que precisa ser ajustado e quais conteúdos podem gerar mais autoridade, conversas e agendamentos.</p>
+          <ul class="public-checks">
+            <li><i data-lucide="check"></i>Bio e posicionamento com clareza comercial.</li>
+            <li><i data-lucide="check"></i>Capas, destaques, feed, CTAs e formatos com maior potencial.</li>
+            <li><i data-lucide="check"></i>Riscos éticos de comunicação médica.</li>
+            <li><i data-lucide="check"></i>Plano de ação semanal para direct, autoridade e agenda.</li>
+          </ul>
+        </div>
+        <div class="public-feature-card instagram-score">
+          <strong>Auditoria inteligente do Instagram</strong>
+          <div class="score-ring">92</div>
+          <span>Score de autoridade, clareza comercial, consistência, formatos vencedores e próximos conteúdos recomendados com base nos dados do perfil.</span>
+          <div class="mini-metrics"><b>Bio</b><b>Feed</b><b>Stories</b><b>CTAs</b></div>
         </div>
       </section>
 
       <section class="public-section audience-section">
         <div class="audience-card">
-          <span class="public-eyebrow">Para quem é</span>
-          <h3>Médicos que querem crescer no digital com método.</h3>
-          <ul class="public-checks"><li><i data-lucide="check"></i>Quem quer construir autoridade sem parecer genérico.</li><li><i data-lucide="check"></i>Quem não sabe o que postar com frequência.</li><li><i data-lucide="check"></i>Quem quer conteúdo estratégico por especialidade.</li></ul>
+          <span class="public-eyebrow">Para quais médicos</span>
+          <h3>Feito para médicos que não querem virar influenciadores. Querem virar referência.</h3>
+          <p>O MedCreator Pro foi criado para profissionais que desejam comunicar valor, educar pacientes e construir autoridade sem perder a postura médica.</p>
+          <div class="specialty-cloud"><b>Dermatologia</b><b>Endocrinologia</b><b>Nutrologia</b><b>Cirurgia plástica</b><b>Ginecologia</b><b>Psiquiatria</b><b>Ortopedia</b><b>Estética médica</b><b>Clínicas particulares</b><b>Procedimentos</b></div>
         </div>
         <div class="audience-card muted">
-          <span class="public-eyebrow">Para quem não é</span>
-          <h3>Não é para promessas fáceis ou atalhos antiéticos.</h3>
-          <ul class="public-checks"><li><i data-lucide="x"></i>Quem busca promessa de resultado garantido.</li><li><i data-lucide="x"></i>Quem quer expor pacientes ou fazer comunicação arriscada.</li><li><i data-lucide="x"></i>Quem não pretende aplicar os materiais com consistência.</li></ul>
+          <span class="public-eyebrow">Frase central</span>
+          <h3>Você não precisa dançar trend. Precisa comunicar valor com clareza.</h3>
+          <ul class="public-checks"><li><i data-lucide="check"></i>Para vender consulta, procedimento ou acompanhamento sem perder sobriedade.</li><li><i data-lucide="check"></i>Para transformar dúvidas reais dos pacientes em conteúdo educativo.</li></ul>
+        </div>
+      </section>
+
+      <section class="public-section trust-section" id="seguranca-public">
+        <div>
+          <span class="public-eyebrow">Segurança ética</span>
+          <h3>Segurança para médicos que levam reputação a sério.</h3>
+          <p>A plataforma organiza conteúdo e posicionamento, mas não substitui julgamento profissional, responsabilidade ética ou análise individual de regras aplicáveis à publicidade médica.</p>
+        </div>
+        <div class="trust-grid">
+          <article><i data-lucide="shield-check"></i><strong>Comunicação responsável</strong><span>Alertas para evitar promessa de resultado, exposição indevida e tom sensacionalista.</span></article>
+          <article><i data-lucide="badge-check"></i><strong>CRM/RQE em foco</strong><span>Checklist para assinatura profissional, especialidade e limites educativos.</span></article>
+          <article><i data-lucide="instagram"></i><strong>Sem senha do Instagram</strong><span>Integração via rota oficial ou importação de dados pelo próprio médico.</span></article>
+          <article><i data-lucide="lock"></i><strong>Privacidade e controle</strong><span>Área individual, login seguro e dados organizados.</span></article>
         </div>
       </section>
 
       <section class="public-section transformation-section">
         <div class="section-title public-title">
-          <div><span class="public-eyebrow">Antes e depois</span><h3>A transformação digital que a plataforma organiza.</h3></div>
+          <div><span class="public-eyebrow">Antes e depois</span><h3>O que muda quando o médico deixa de improvisar.</h3></div>
         </div>
         <div class="before-after-grid">
-          <article><strong>Antes</strong><span>Postagens soltas, baixa clareza de posicionamento, dúvidas sobre ética, perfil genérico e dificuldade para manter constância.</span></article>
-          <article><strong>Depois</strong><span>Linha editorial clara, conteúdos por especialidade, calendário, diagnóstico do Instagram e comunicação mais profissional.</span></article>
-        </div>
-      </section>
-
-      <section class="public-section public-split" id="instagram-pro-public">
-        <div>
-          <span class="public-eyebrow">Funcionalidade exclusiva</span>
-          <h3>Instagram Pro: diagnóstico profissional do perfil médico.</h3>
-          <p>O médico pode conectar o Instagram profissional via API oficial da Meta, importar Insights reais, enviar prints do perfil ou de posts e receber leitura estratégica com oportunidades, riscos, formatos vencedores e sugestões para continuar crescendo.</p>
-          <ul class="public-checks">
-            <li><i data-lucide="check"></i>Conexão oficial por OAuth da Meta para perfis profissionais autorizados.</li>
-            <li><i data-lucide="check"></i>Leitura de conteúdos, métricas, bio, destaques, feed, CTAs e formatos com melhor resposta.</li>
-            <li><i data-lucide="check"></i>Diagnóstico de autoridade, conexão, conversão e riscos de comunicação médica.</li>
-            <li><i data-lucide="check"></i>Plano de ação com formatos que devem continuar, pausar ou testar.</li>
-          </ul>
-        </div>
-        <div class="public-feature-card">
-          <strong>Auditoria inteligente do Instagram</strong>
-          <div class="score-ring">92</div>
-          <span>Score de autoridade, clareza comercial, consistência, formatos vencedores e próximos conteúdos recomendados com base nos dados do perfil.</span>
-          <ul class="public-checks compact-list">
-            <li><i data-lucide="bar-chart-3"></i>Reels, carrosséis, stories e posts analisados.</li>
-            <li><i data-lucide="target"></i>Recomendação do que repetir para vender com ética.</li>
-          </ul>
+          <article><strong>Antes do MedCreator Pro</strong><ul><li>Perfil genérico</li><li>Conteúdo sem direção</li><li>Medo de infringir normas</li><li>Stories soltos</li><li>Bio sem clareza</li><li>Poucos CTAs</li></ul></article>
+          <article><strong>Depois do MedCreator Pro</strong><ul><li>Linha editorial por especialidade</li><li>Roteiros prontos com CTA ético</li><li>Calendário semanal</li><li>Diagnóstico do Instagram</li><li>Tom médico profissional</li><li>Mais clareza para gerar conversas</li></ul></article>
         </div>
       </section>
 
@@ -3878,20 +3997,21 @@
           <div class="library-tags"><b>React</b><b>Reels 7-15s</b><b>Stories</b><b>Carrossel</b><b>Imagem estática</b><b>DM</b></div>
         </div>
         <div>
-          <span class="public-eyebrow">Conteúdo pronto para usar</span>
-          <h3>Criação 100% personalizada para a especialidade do médico.</h3>
-          <p>Ao acessar a Área do Médico, o conteúdo já aparece orientado pela especialidade, objetivo comercial e formato escolhido. A IA entrega roteiro, cena, gancho visual, CTA e cuidados de gravação.</p>
+          <span class="public-eyebrow">Primeiro acesso</span>
+          <h3>Ao entrar na plataforma, você recebe uma estrutura pronta para começar.</h3>
           <ul class="public-checks">
-            <li><i data-lucide="check"></i>Roteiros detalhados com orientação de gravação.</li>
-            <li><i data-lucide="check"></i>Stories com ambiente, tema, bastidor e intenção de venda.</li>
-            <li><i data-lucide="check"></i>Calendário editorial com anexos, horário, status e exportação.</li>
+            <li><i data-lucide="check"></i>Diagnóstico inicial de posicionamento.</li>
+            <li><i data-lucide="check"></i>Biblioteca por especialidade.</li>
+            <li><i data-lucide="check"></i>Roteiros para Reels, Stories e carrosséis.</li>
+            <li><i data-lucide="check"></i>Calendário editorial e CTAs éticos para direct.</li>
+            <li><i data-lucide="check"></i>Checklist de comunicação médica e plano semanal.</li>
           </ul>
         </div>
       </section>
 
       <section class="public-section plans-section" id="planos-public">
         <div class="section-title public-title">
-          <div><h3>Escolha seu plano e receba o acesso por e-mail.</h3><p>Após a confirmação do pagamento, o sistema libera a Área do Médico com e-mail e senha cadastrados.</p></div>
+          <div><span class="public-eyebrow">Planos</span><h3>Escolha seu plano e receba o acesso por e-mail.</h3><p>Após a confirmação do pagamento, o sistema libera a Área do Médico com e-mail e senha cadastrados.</p></div>
         </div>
         <div class="plans-grid">
           <article class="plan-card">
@@ -3904,13 +4024,13 @@
             <button class="btn btn-muted plan-checkout" type="button" data-plan="Creator Start">Assinar Creator Start</button>
           </article>
           <article class="plan-card featured">
-            <span class="plan-label">Mais escolhido</span>
+            <span class="plan-label">Mais indicado</span>
             <h4>Creator Pro</h4>
             <p>Para transformar Instagram em autoridade, conexão e previsibilidade.</p>
             <strong class="plan-price">R$ 197,90<span>/mês</span></strong>
             <div class="ai-limit"><strong>87<span>conteúdos com IA/mês</span></strong><small>Recomendado para rotina real: reels, stories, carrosséis, CTAs e calendário semanal.</small></div>
             <ul><li>Tudo do Start</li><li>Instagram Pro completo</li><li>Análise por print e insights</li><li>Plano semanal estratégico</li></ul>
-            <button class="btn btn-primary plan-checkout" type="button" data-plan="Creator Pro">Assinar Creator Pro</button>
+            <button class="btn btn-primary plan-checkout" type="button" data-plan="Creator Pro">Assinar Creator Pro agora</button>
           </article>
           <article class="plan-card">
             <span class="plan-label">Alta performance</span>
@@ -3944,19 +4064,6 @@
         </div>
       </section>
 
-      <section class="public-section trust-section" id="seguranca-public">
-        <div>
-          <span class="public-eyebrow">Segurança e confiança</span>
-          <h3>Comunicação médica com responsabilidade, clareza e proteção de dados.</h3>
-          <p>A plataforma organiza conteúdo e posicionamento, mas não substitui julgamento profissional, responsabilidade ética ou análise individual de regras aplicáveis à publicidade médica.</p>
-        </div>
-        <div class="trust-grid">
-          <article><i data-lucide="shield-check"></i><strong>Uso responsável</strong><span>Orientações para evitar promessas, exposição indevida e comunicação sensacionalista.</span></article>
-          <article><i data-lucide="lock"></i><strong>Dados e acesso</strong><span>Estrutura preparada para login individual, planos, permissões e evolução com backend seguro.</span></article>
-          <article><i data-lucide="file-check"></i><strong>Transparência</strong><span>Política de privacidade, termos de uso, aviso legal e canais de contato organizados.</span></article>
-        </div>
-      </section>
-
       <section class="public-section faq-section" id="faq-public">
         <div class="section-title public-title">
           <div><span class="public-eyebrow">FAQ</span><h3>Perguntas frequentes</h3></div>
@@ -3967,10 +4074,9 @@
           <details><summary>Preciso ter muitos seguidores?</summary><p>Não. A plataforma ajuda tanto médicos iniciantes quanto perfis que já produzem conteúdo e querem melhorar consistência e direção.</p></details>
           <details><summary>O foco é viralizar ou construir autoridade?</summary><p>O foco principal é autoridade, clareza e posicionamento. Alcance é tratado como consequência de conteúdo mais relevante e bem estruturado.</p></details>
           <details><summary>Funciona para qualquer especialidade médica?</summary><p>A plataforma possui conteúdos estruturados para 55 áreas médicas, com temas, ganchos, roteiros, CTAs e prompts por especialidade.</p></details>
-          <details><summary>Existe limite para usar a IA?</summary><p>Sim. Como cada geração tem custo de processamento, cada plano possui uma franquia mensal estimada: Start com 16 conteúdos, Pro com 87 conteúdos e Elite com 146 conteúdos com IA. O consumo pode variar um pouco conforme complexidade, tamanho do roteiro e duração do vídeo.</p></details>
+          <details><summary>Existe limite para usar a IA?</summary><p>Sim. Cada plano possui uma franquia mensal estimada: Start com 16 conteúdos, Pro com 87 conteúdos e Elite com 146 conteúdos com IA. O consumo pode variar conforme complexidade, tamanho do roteiro e duração do vídeo.</p></details>
           <details><summary>Como funciona o acesso?</summary><p>O cliente escolhe um plano, conclui o pagamento e recebe por e-mail os dados para entrar na Área do Médico.</p></details>
-          <details><summary>Existe suporte?</summary><p>A estrutura visual prevê canais de contato e suporte. A operação final de suporte deve ser configurada conforme o canal oficial escolhido.</p></details>
-          <details><summary>Posso acessar pelo celular?</summary><p>Sim. A página e a área interna foram organizadas para uso em desktop e dispositivos móveis.</p></details>
+          <details><summary>Existe suporte?</summary><p>A estrutura prevê canais de contato e suporte. A operação final deve ser configurada conforme o canal oficial escolhido.</p></details>
         </div>
       </section>
 
@@ -3986,7 +4092,7 @@
           <img class="footer-logo" src="brand/medcreatorpro-logo-horizontal-dark.svg" alt="MedCreator Pro" />
           <p>Plataforma de posicionamento digital, conteúdo estratégico e autoridade para médicos.</p>
         </div>
-        <nav aria-label="Links principais"><a href="#solucao-public">Solução</a><a href="#instagram-pro-public">Instagram Pro</a><a href="#planos-public">Planos</a><a href="#faq-public">FAQ</a></nav>
+        <nav aria-label="Links principais"><a href="#dor-public">Dor</a><a href="#solucao-public">Solução</a><a href="#instagram-pro-public">Instagram Pro</a><a href="#planos-public">Planos</a><a href="#faq-public">FAQ</a></nav>
         <nav aria-label="Links legais"><a href="politica-de-privacidade.html">Política de privacidade</a><a href="termos-de-uso.html">Termos de uso</a><a href="aviso-legal.html">Aviso legal</a><a href="contato.html">Contato</a></nav>
         <small>© 2026 MedCreator Pro. Todos os direitos reservados.</small>
       </footer>
@@ -4581,7 +4687,7 @@
       "Creator Pro": 87,
       "Creator Elite": 146
     };
-    let staticDemoMode = location.protocol === "file:" || !location.hostname;
+    let staticDemoMode = location.protocol === "file:";
 
     navItems.forEach((item) => {
       item.addEventListener("click", () => {
@@ -6132,7 +6238,7 @@
           return;
         }
         if (staticDemoMode) {
-          document.getElementById("loginError").textContent = "Acesso não liberado neste ambiente. Use um login autorizado ou solicite liberação.";
+          document.getElementById("loginError").textContent = "Acesso não liberado. Use o e-mail e a senha recebidos após a confirmação do plano.";
           document.getElementById("loginError").classList.add("show");
           return;
         }

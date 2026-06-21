@@ -1,119 +1,181 @@
-# Med Creator PRO
+# MedCreator Pro
 
-Primeira versão full-stack da plataforma para médicos criadores.
+Plataforma premium para médicos criarem conteúdo estratégico, organizarem calendário editorial, acessarem uma biblioteca por especialidade e analisarem o Instagram com IA, dados importados e integração oficial via Meta.
 
-## Recursos implementados
+## Stack
 
-- Login individual com sessão segura e senha armazenada com PBKDF2.
-- Banco SQLite local (`med_creator.db`) criado automaticamente.
-- Perfil inteligente do médico: especialidade, CRM, RQE, cidade, serviços, público e tom de voz.
-- Criador de roteiros com OpenAI Responses API e Structured Outputs.
-- Fallback local quando a chave da OpenAI ainda não foi configurada.
-- Instagram Pro com importação de Insights, diagnóstico visual por IA e plano estratégico por `@`.
-- Biblioteca, calendário, Central CRM e interface atual preservados.
-- Planejamento editorial com data, horário, anexos, edição, exclusão, exportação e lembretes dentro da plataforma. Notificações do navegador funcionam com a plataforma aberta em segundo plano.
+- Next.js App Router
+- React
+- API Routes server-side na Vercel
+- Supabase REST com `service_role` apenas no servidor
+- OpenAI Responses API para geração de roteiros e análises
+- Instagram OAuth via Meta para perfis profissionais autorizados
 
-## Configuração
+## Funcionalidades principais
 
-Crie um arquivo chamado `.env` na mesma pasta do `server.py`. Use `.env.example` como referência e substitua os valores de exemplo pelas suas credenciais. O servidor carrega esse arquivo automaticamente ao iniciar.
+- Landing page comercial premium, responsiva e pronta para apresentação a médicos.
+- Área do Médico com login por e-mail e senha liberados após pagamento.
+- Criador IA de roteiros, posts, stories e CTAs por especialidade.
+- Biblioteca secreta com ganchos, temas, roteiros, CTAs e prompts.
+- Planejamento editorial com status, horário, anexos, edição, exclusão e exportação.
+- Instagram Pro com conexão OAuth, importação de Insights, diagnóstico por prints e recomendações.
+- Central do CRM com orientação ética, CRM/RQE e dúvidas comuns de comunicação médica.
 
-Também é possível definir as variáveis diretamente no terminal antes de iniciar o servidor.
+## Rodar localmente
 
-Obrigatórias para IA real:
+1. Instale as dependências:
 
-```powershell
-$env:OPENAI_API_KEY="sua-chave"
+```bash
+npm install
 ```
 
-## Executar
+2. Crie o arquivo `.env.local` na raiz do projeto usando `.env.example` como base.
 
-```powershell
-python server.py
+3. Rode em desenvolvimento:
+
+```bash
+npm run dev
 ```
 
-Abra:
+4. Abra:
 
 ```text
-http://127.0.0.1:4173/
+http://localhost:3000
 ```
 
-## Publicação na Hostinger
+## Build e preview local
 
-Este projeto não é somente um arquivo HTML: a IA, o login e o banco dependem do `server.py`. Na Hostinger, use um VPS Linux. A hospedagem compartilhada comum serve arquivos estáticos, mas não mantém este backend Python em execução.
+```bash
+npm run build
+npm run preview
+```
 
-Envie para o VPS os arquivos do projeto, exceto `.env`, `med_creator.db`, logs e `__pycache__`. Crie o `.env` diretamente no servidor:
+Por padrão, `npm run preview` usa o `next start`. Se quiser outra porta:
+
+```bash
+npm run preview -- -p 4173
+```
+
+## Variáveis de ambiente necessárias na Vercel
+
+Configure em:
+
+`Vercel > Project > Settings > Environment Variables`
+
+Obrigatórias para produção:
 
 ```env
-OPENAI_API_KEY=sua-chave-privada
-OPENAI_MODEL=gpt-5.4-mini
-MED_CREATOR_HOST=0.0.0.0
-MED_CREATOR_PORT=4173
-MED_CREATOR_COOKIE_SECURE=true
-MED_CREATOR_DB_PATH=/var/lib/med-creator/med_creator.db
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4.1-mini
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+ENABLE_DEMO_LOGIN=false
 ```
 
-Instale Python 3 e `curl`, execute o backend como serviço persistente e coloque Nginx na frente do processo para conectar o domínio com HTTPS. Configure backup recorrente do caminho definido em `MED_CREATOR_DB_PATH`.
+Necessárias para Instagram OAuth oficial:
 
-Use os modelos em `deploy/med-creator.service.example` e `deploy/nginx-med-creator.conf.example` como ponto de partida. Depois de ativar o domínio, emita o certificado HTTPS e mantenha `MED_CREATOR_COOKIE_SECURE=true`.
+```env
+META_INSTAGRAM_CLIENT_ID=
+META_INSTAGRAM_CLIENT_SECRET=
+META_INSTAGRAM_REDIRECT_URI=https://SEU_DOMINIO/api/instagram/oauth/callback
+META_INSTAGRAM_SCOPES=instagram_business_basic,instagram_business_manage_insights
+META_INSTAGRAM_WEBHOOK_VERIFY_TOKEN=
+```
 
-Nunca coloque `OPENAI_API_KEY` dentro do `index.html`, em arquivos JavaScript públicos ou no repositório. A chave deve existir somente como variável privada no servidor.
-
-## Observações importantes
-
-- A conexão oficial com a API do Instagram fica disponível quando as credenciais da Meta e a URL HTTPS de callback forem configuradas no `.env`. A importação de Insights e o diagnóstico por print continuam disponíveis como rotas complementares.
-- Para publicação comercial, hospede o backend com HTTPS, use uma chave secreta de sessão e configure rotinas de backup.
-- Não envie prontuários ou dados identificáveis de pacientes para análise sem base legal e salvaguardas adequadas.
-
-## Cadastro e liberação manual
-
-A tela inicial recebe apenas nome, e-mail, WhatsApp e CRM. Cada solicitação fica salva como pendente no banco.
-
-Para receber novos cadastros por e-mail, configure um servidor SMTP no `.env`:
+Opcionais para automações de cadastro:
 
 ```env
 ACCESS_REQUEST_NOTIFY_EMAIL=marcosestevees@icloud.com
-SMTP_ENABLED=true
-SMTP_HOST=smtp.seu-provedor.com
-SMTP_PORT=587
-SMTP_USER=seu_usuario_smtp
-SMTP_PASSWORD=sua_senha_smtp
-SMTP_FROM=seu_remetente@dominio.com
-```
-
-Sem SMTP, o cadastro continua salvo no banco e pode ser consultado no terminal:
-
-```powershell
-python manage_access.py list
-```
-
-Para liberar um acesso pendente:
-
-```powershell
-python manage_access.py approve --email medico@clinica.com.br --specialty "Dermatologia"
-```
-
-## Instagram oficial com OAuth
-
-Na Hostinger, publique este backend em um VPS com domínio HTTPS antes de cadastrar o callback na Meta. Depois, configure:
-
-```env
-META_INSTAGRAM_CLIENT_ID=seu_instagram_app_id
-META_INSTAGRAM_CLIENT_SECRET=seu_instagram_app_secret
-META_INSTAGRAM_REDIRECT_URI=https://app.seu-dominio.com.br/api/instagram/oauth/callback
-META_INSTAGRAM_SCOPES=instagram_business_basic,instagram_business_manage_insights
-META_INSTAGRAM_WEBHOOK_VERIFY_TOKEN=crie_um_token_secreto
-```
-
-Cadastre exatamente a mesma URL de `META_INSTAGRAM_REDIRECT_URI` como URI OAuth válida no painel da Meta. O médico poderá usar o botão `Conectar oficialmente` dentro do Instagram Pro. A senha do Instagram nunca passa pela Med Creator PRO.
-
-## Aviso de novo cadastro no WhatsApp
-
-O cadastro sempre fica salvo como pendente no banco e a tela oferece um link pré-preenchido para avisar o atendimento. Para receber também uma mensagem automática pelo WhatsApp Cloud API, crie um template aprovado com quatro parâmetros no corpo: nome, e-mail, WhatsApp e CRM. Configure:
-
-```env
 ACCESS_REQUEST_WHATSAPP=5511924787933
-WHATSAPP_CLOUD_ACCESS_TOKEN=seu_token_whatsapp_cloud_api
-WHATSAPP_CLOUD_PHONE_NUMBER_ID=seu_phone_number_id
+WHATSAPP_CLOUD_ACCESS_TOKEN=
+WHATSAPP_CLOUD_PHONE_NUMBER_ID=
 WHATSAPP_ACCESS_TEMPLATE=novo_cadastro_med_creator
 WHATSAPP_ACCESS_TEMPLATE_LANGUAGE=pt_BR
 ```
+
+## Supabase
+
+1. Crie um projeto no Supabase.
+2. Abra `SQL Editor`.
+3. Rode o conteúdo de `supabase-schema.sql`.
+4. Copie:
+   - `Project URL` para `SUPABASE_URL`
+   - `service_role key` para `SUPABASE_SERVICE_ROLE_KEY`
+5. Configure essas variáveis na Vercel.
+
+### Tabelas usadas
+
+- `access_requests`: cadastros e solicitações.
+- `platform_users`: usuários liberados após pagamento.
+- `ai_usage`: histórico futuro de consumo de IA.
+- `instagram_imports`: importações de Insights.
+
+### Criar um acesso de teste
+
+No Supabase, adicione uma linha em `platform_users`:
+
+| name | email | access_password | specialty | crm | plan | status |
+|---|---|---|---|---|---|---|
+| Dr. Felipe Almeida | medico@medcreatorpro.com | MedPro2026! | Dermatologia | CRM/SP 123456 | Creator Pro | active |
+
+O projeto também mantém esse mesmo acesso como fallback quando o Supabase ainda não está configurado.
+Em produção, mantenha `ENABLE_DEMO_LOGIN=false`. Para testes temporários em preview, ative `ENABLE_DEMO_LOGIN=true` apenas se souber que esse acesso provisório poderá entrar.
+
+## Deploy na Vercel
+
+1. Suba o projeto para o GitHub.
+2. Na Vercel, clique em `Add New > Project`.
+3. Importe o repositório.
+4. Framework Preset: `Next.js`.
+5. Build Command: `npm run build`.
+6. Output Directory: deixe vazio.
+7. Configure todas as variáveis de ambiente.
+8. Clique em `Deploy`.
+9. Depois do deploy, teste:
+   - Página inicial.
+   - Área do Médico.
+   - Login de teste.
+   - Criador IA.
+   - Instagram Pro.
+   - Links legais.
+
+## GitHub
+
+Arquivos que devem ir para o GitHub:
+
+- `app/`
+- `public/`
+- `brand/`
+- `index.html`
+- `package.json`
+- `package-lock.json`
+- `vercel.json`
+- `supabase-schema.sql`
+- `.env.example`
+- `.gitignore`
+- `README.md`
+- páginas legais HTML
+
+Não envie:
+
+- `.env`
+- `.env.local`
+- `.next/`
+- `node_modules/`
+- arquivos `.zip`
+- logs
+- bancos locais
+
+## Segurança
+
+- Nunca coloque `OPENAI_API_KEY` no HTML ou no navegador.
+- Nunca publique `SUPABASE_SERVICE_ROLE_KEY`.
+- A `service_role key` só pode existir em variáveis privadas da Vercel.
+- O Instagram OAuth deve usar HTTPS e callback exatamente igual ao configurado na Meta.
+- Não envie dados identificáveis de pacientes para análise sem base legal e salvaguardas adequadas.
+
+## Observações de produção
+
+- A versão completa deve rodar na Vercel ou ambiente equivalente com serverless/API routes.
+- Hospedagem estática comum não executa IA, login server-side, Supabase server-side nem OAuth.
+- Após alterar variáveis de ambiente na Vercel, faça novo deploy.

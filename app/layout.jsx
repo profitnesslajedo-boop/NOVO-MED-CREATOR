@@ -1,15 +1,15 @@
 export const metadata = {
-  metadataBase: new URL("https://creatorpro-seven.vercel.app"),
-  title: "MedCreator Pro",
-  description: "Plataforma de conteúdo digital médico",
+  metadataBase: new URL("https://medcreatorpro.app"),
+  title: "MedCreator Pro | Plataforma de conteúdo e autoridade digital para médicos",
+  description: "Crie roteiros, stories, calendário editorial e analise seu Instagram com estratégia, ética e autoridade.",
   icons: {
     icon: "/brand/favicon.svg",
     shortcut: "/brand/favicon.svg",
     apple: "/brand/favicon.svg"
   },
   openGraph: {
-    title: "MedCreator Pro",
-    description: "Plataforma de conteúdo digital médico para médicos criadores.",
+    title: "MedCreator Pro | Plataforma de conteúdo e autoridade digital para médicos",
+    description: "Crie roteiros, stories, calendário editorial e analise seu Instagram com estratégia, ética e autoridade.",
     images: ["/brand/medcreatorpro-logo-horizontal-dark.svg"]
   }
 };
